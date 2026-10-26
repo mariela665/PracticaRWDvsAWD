@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Comp - Móvil (AWD)</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body style="background: #fff;">
+    <header class="encabezado">
+        <h1>Punto Comp - Versión Móvil AWD</h1>
+    </header>
+
+    <main class="contenedor" style="display: block; padding: 10px;">
+        <section class="catalogo">
+            <h2 style="font-size: 1.2rem; margin-bottom: 10px;">Catálogo Rápido</h2>
+            <!-- Cuadrícula optimizada a una sola columna para móvil -->
+            <div class="productos" style="grid-template-columns: 1fr;">
+                <% productos.forEach(prod => { %>
+                    <article class="producto">
+                        <img src="<%= prod.imagenBaja %>" alt="<%= prod.nombre %>" style="height: 120px; object-fit: contain;">
+                        <h3><%= prod.nombre %></h3>
+                        <p><strong>$<%= prod.precio.toLocaleString("es-MX") %> MXN</strong></p>
+                        <button onclick="alert('Comprado: <%= prod.nombre %>')">Comprar</button>
+                    </article>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>Punto Comp - Vista Móvil AWD Optimizada</p></footer>
+</body>
+</html>

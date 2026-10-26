@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>Punto Comp</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#filtros">Filtros</a>
+        </nav>
+    </header>
+
+    
+    <main class="contenedor">
+        <aside id="filtros" class="filtros">
+            <details open>
+                <summary><h2>Filtros y Comparativa</h2></summary>
+                
+                <div class="contenido-filtros">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="todos">Todos</option>
+                        <option value="Procesador">Procesadores</option>
+                        <option value="Memoria RAM">Memorias RAM</option>
+                        <option value="Almacenamiento">Almacenamiento</option>
+                        <option value="Tarjeta gráfica">Tarjetas gráficas</option>
+                    </select>
+
+                    <h3>Comparativa</h3>
+                    <p>Consulta los componentes disponibles y sus precios.</p>
+                    <div class="grafico">
+                        <span>CPU</span>
+                        <div style="width: 85%"></div>
+                        <span>RAM</span>
+                        <div style="width: 65%"></div>
+                        <span>SSD</span>
+                        <div style="width: 75%"></div>
+                    </div>
+                </div>
+            </details>
+        </aside>
+
+        <section class="catalogo" id="productos">
+            <h2>Catálogo de componentes</h2>
+            <div id="lista-productos" class="productos"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p> Catálogo de hardware</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
